@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      body, h1, p {
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+         background-color: #f0f0f0;
+         color: #333;
+         line-height: 1.6;
+      }
+
+      header {
+         background-color: #006400; /* Dark Green */
+         padding: 20px 0;
+         text-align: center;
+         color: #fff;
+      }
+
+      header h1 {
+         font-size: 2.5em;
+         margin-bottom: 10px;
+      }
+
+      header p {
+         font-size: 1.2em;
+         margin-top: 0;
+      }
+
+      nav {
+         text-align: center;
+         background-color: #228B22; /* Light Green */
+         padding: 10px 0;
+      }
+
+      nav a {
+         color: #fff;
+         text-decoration: none;
+         margin: 0 10px;
+         font-weight: bold;
+         font-size: 1.1em;
+      }
+
+      section {
+         padding: 20px;
+      }
+
+      .container {
+         max-width: 960px;
+         margin: 0 auto;
+         overflow: hidden;
+      }
+
+      .card {
+         background-color: #fff;
+         border-radius: 8px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         padding: 20px;
+         margin-bottom: 20px;
+      }
+
+      .card h2 {
+         font-size: 2em;
+         margin-bottom: 10px;
+         color: #006400; /* Dark Green */
+      }
+
+      .card p {
+         font-size: 1em;
+         margin-top: 0;
+      }
+
+      footer {
+         background-color: #006400;
+         color: #fff;
+         padding: 20px;
+         text-align: center;
+      }
+
+      .contact form {
+         display: flex;
+         flex-direction: column;
+      }
+
+      .contact label {
+         margin-bottom: 5px;
+         font-weight: bold;
+      }
+
+      .contact input, .contact textarea {
+         margin-bottom: 10px;
+         padding: 10px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         font-size: 1em;
+      }
+
+      .contact button {
+         padding: 10px;
+         background-color: #228B22; /* Light Green */
+         color: #fff;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         font-size: 1em;
+      }
+
+      .contact button:hover {
+         background-color: #006400; /* Dark Green */
+      }
+
+      .highlight {
+         color: #006400;
+         font-weight: bold;
+         font-size: 1.2em;
+      }
+
+      .upload-report, .search-report {
+         margin-bottom: 20px;
+      }
+
+      .report-list {
+         margin-top: 20px;
+      }
+
+      .report-item {
+         padding: 10px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         margin-bottom: 10px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .delete-button {
+         background-color: #ff4d4d;
+         color: #fff;
+         border: none;
+         padding: 5px 10px;
+         cursor: pointer;
+         border-radius: 4px;
+      }
+
+      .delete-button:hover {
+         background-color: #ff1a1a;
+      }
+
+      #admin-section {
+         display: none;
+      }
+
+      .admin-login {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+      }
+
+      .admin-login input {
+         margin-bottom: 10px;
+         padding: 10px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         font-size: 1em;
+      }
+
+      .admin-login button {
+         padding: 10px;
+         background-color: #228B22; /* Light Green */
+         color: #fff;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         font-size: 1em;
+      }
+
+      .admin-login button:hover {
+         background-color: #006400; /* Dark Green */
+      }
+   </style>
+</head>
+<body>
+
+<header>
+   <h1>KOLKATA PATHOLOGY CENTRE</h1>
+   <p>WE CARE FOR YOUR HEALTH SINCE 2002</p>
+</header>
+
+<nav>
+   <a href="#">Home</a>
+   <a href="#">Services</a>
+   <a href="#">Team</a>
+   <a href="#">Contact</a>
+</nav>
+
+<section class="container">
+   <div class="card services">
+      <h2>Our Services</h2>
+      <p>ALL PATHOLOGICAL EXAMINATION DONE HERE</p>
+      <p><span class="highlight">BLOOD TEST UPTO 50% Discount!</span></p>
+      <p>ALL TYPES OF PATHOLOGICAL TESTS AND EXAMINATIONS (BLOOD, URINE, SPUTUM, PUS, BIOPSY, FNAC) TEST DONE HERE</p>
+      <p>From (NABL, CAP, ISO) Certified Laboratory</p>
+      <h3>Services Available Here:</h3>
+      <ul>
+         <li>BLOOD</li>
+         <li>URINE</li>
+         <li>Blood Collection</li>
+         <li>Injection</li>
+         <li>SPUTUM</li>
+         <li>PUS</li>
+         <li>FIRST AID</li>
+         <li>Saline</li>
+         <li>BIOPSY</li>
+         <li>FNAC</li>
+         <li>Dressing</li>
+         <li>Catheter</li>
+      </ul>
+      <h3>Contact for:</h3>
+      <ul>
+         <li>ECG</li>
+         <li>X RAY</li>
+         <li>ECHO</li>
+         <li>USG</li>
+         <li>CT SCAN</li>
+         <li>MRI</li>
+      </ul>
+   </div>
+
+   <div class="card upload-report" id="admin-section">
+      <h2>Upload Patient Report</h2>
+      <form id="uploadForm">
+         <label for="patientName">Patient Name:</label>
+         <input type="text" id="patientName" name="patientName" required>
+         <label for="reportFile">Report File:</label>
+         <input type="file" id="reportFile" name="reportFile" accept=".pdf" required>
+         <button type="submit">Upload Report</button>
+      </form>
+   </div>
+
+   <div class="card search-report">
+      <h2>Search Patient Report</h2>
+      <label for="searchName">Enter Patient Name:</label>
+      <input type="text" id="searchName" name="searchName">
+      <button onclick="searchReport()">Search</button>
+      <div class="report-list" id="reportList"></div>
+   </div>
+
+   <div class="card team">
+      <h2>Our Team</h2>
+      <p>Our team of experienced pathologists and lab technicians are dedicated to providing the highest quality of care. We work together to ensure every patient receives accurate diagnoses and compassionate care.</p>
+   </div>
+
+   <div class="card contact">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or need to make an appointment, please contact us using the form below:</p>
+      <form>
+         <label for="name">Name:</label>
+         <input type="text" id="name" name="name" required>
+
+         <label for="email">Email:</label>
+         <input type="email" id="email" name="email" required>
+
+         <label for="message">Message:</label>
+         <textarea id="message" name="message" rows="4" required></textarea>
+
+         <button type="submit">Submit</button>
+      </form>
+      <h3>Our Locations</h3>
+      <p>3/4A/16H, NARKELDANGA MAIN ROAD, KOLKATA - 700011</p>
+      <p>55B, GULAM JILANI KHAN ROAD, TOPSIA ROAD, KOLKATA - 700046</p>
+   </div>
+</section>
+
+<div class="admin-login" id="admin-login">
+   <h2>Admin Login</h2>
+   <input type="password" id="adminPassword" placeholder="Enter Admin Password">
+   <button onclick="checkAdmin()">Login</button>
+</div>
+
+<footer>
+   <p>&copy; 2024 KOLKATA PATHOLOGY CENTRE. All rights reserved.</p>
+</footer>
+
+<script>
+   document.getElementById('uploadForm').addEventListener('submit', function(event) {
+       event.preventDefault();
+       const patientName = document.getElementById('patientName').value;
+       const reportFile = document.getElementById('reportFile').files[0];
+       const reader = new FileReader();
+
+       reader.onload = function(upload) {
+           const reports = JSON.parse(localStorage.getItem('reports') || '[]');
+           reports.push({ name: patientName, report: upload.target.result });
+           localStorage.setItem('reports', JSON.stringify(reports));
+           alert('Report uploaded successfully!');
+           displayReports();
+       };
+
+       reader.readAsDataURL(reportFile);
+   });
+
+   function searchReport() {
+       const searchName = document.getElementById('searchName').value.toLowerCase();
+       const reportList = document.getElementById('reportList');
+       reportList.innerHTML = '';
+       const reports = JSON.parse(localStorage.getItem('reports') || '[]');
+       const filteredReports = reports.filter(report => report.name.toLowerCase().includes(searchName));
+
+       if (filteredReports.length > 0) {
+           filteredReports.forEach(report => {
+               const reportItem = document.createElement('div');
+               reportItem.classList.add('report-item');
+               reportItem.innerHTML = `
+                   <span>${report.name}</span>
+                   <a href="${report.report}" download="${report.name}_report.pdf">Download</a>
+                   <button class="delete-button" onclick="deleteReport('${report.name}')">Delete</button>
+               `;
+               reportList.appendChild(reportItem);
+           });
+       } else {
+           reportList.innerHTML = '<p>No reports found.</p>';
+       }
+   }
+
+   function displayReports() {
+       const reportList = document.getElementById('reportList');
+       reportList.innerHTML = '';
+       const reports = JSON.parse(localStorage.getItem('reports') || '[]');
+
+       if (reports.length > 0) {
+           reports.forEach(report => {
+               const reportItem = document.createElement('div');
+               reportItem.classList.add('report-item');
+               reportItem.innerHTML = `
+                   <span>${report.name}</span>
+                   <a href="${report.report}" download="${report.name}_report.pdf">Download</a>
+                   <button class="delete-button" onclick="deleteReport('${report.name}')">Delete</button>
+               `;
+               reportList.appendChild(reportItem);
+           });
+       } else {
+           reportList.innerHTML = '<p>No reports found.</p>';
+       }
+
+       const reportCount = document.createElement('p');
+       reportCount.innerText = `Total Reports Uploaded: ${reports.length}`;
+       reportList.appendChild(reportCount);
+   }
+
+   function deleteReport(name) {
+       const reports = JSON.parse(localStorage.getItem('reports') || '[]');
+       const filteredReports = reports.filter(report => report.name !== name);
+       localStorage.setItem('reports', JSON.stringify(filteredReports));
+       alert('Report deleted successfully!');
+       searchReport();
+   }
+
+   function checkAdmin() {
+       const adminPassword = document.getElementById('adminPassword').value;
+       if (adminPassword === 'KPC@2002') {
+           document.getElementById('admin-section').style.display = 'block';
+           document.getElementById('admin-login').style.display = 'none';
+           displayReports();
+       } else {
+           alert('Incorrect password!');
+       }
+   }
+
+   displayReports();
+</script>
+
+</body>
+</html>
